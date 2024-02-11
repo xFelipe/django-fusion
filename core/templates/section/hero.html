@@ -1,7 +1,22 @@
 {% load static %}
 
+
+
 <!-- Hero Area Start -->
 <div id="hero-area" class="hero-area-bg">
+
+    {% if messages %}
+        <div class="container">
+            
+                {% for message in messages %}
+                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %}">
+                        <button type="button" class="close" data-dismiss="alert"></button>
+                        <strong>{{ message }}</strong>
+                    </div>
+                {% endfor %}
+        </div>
+    {% endif %}
+
 <div class="container">      
     <div class="row">
     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -22,4 +37,6 @@
     </div> 
 </div> 
 </div>
+
+
 <!-- Hero Area End -->
