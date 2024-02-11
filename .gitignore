@@ -92,3 +92,4 @@ staticfiles
 mediafiles
 old
 .venv
+htmlcov

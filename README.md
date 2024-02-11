@@ -10,3 +10,9 @@
  - manage migrate
  - manage runserver
  
+ ## Tests
+  - coverage run manage.py test
+  - coverage report
+  - coverage html
+  - cd htmlcov
+  - python -m http.server

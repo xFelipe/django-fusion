@@ -24,10 +24,5 @@ class IndexView(FormView):
         return super(IndexView, self).form_valid(form)
     
     def form_invalid(self, form, *args, **kwargs):
-        print('---------------')
-        print(self.request.POST)
-        print(form)
-        print('---------------')
-        form.errors
         messages.error(self.request, form.errors)
         return super(IndexView, self).form_invalid(form)
